@@ -36,7 +36,7 @@ There will be a public token, with a certain amount of credit per time (e.g. 10 
 - Private Token
 This token is bound to an individual and certain details (forename and surname and email address) in order to allow additional features, like email alerts and individual support.
 
-## Discusion
+## Discussion
 
 Please feel free to share your thoughts and let me know if you need any additional information.
 
