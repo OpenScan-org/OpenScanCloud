@@ -20,7 +20,7 @@ If successful it will return statuscode 200 + *{'status':'created', 'ulink':[lis
 Once a project is created and all part(s) are successfully uploaded, it is necessary to initialize the processing of the image set by calling this endpoint, which will return *{'status':'started'}*
 
 - ### /getProjectInfo(token, project)
-Calling this endpoint will return *{'dlink':downloadlink, 'status':status, 'ulink':uploadlinks}*. Note that with the public access token, anybody could guess the project name and thus gain access to the download link. Therefore it is highly adviced to use some randomized project name.
+Calling this endpoint will return *{'dlink':downloadlink, 'status':status, 'ulink':uploadlinks}*.
 
 - ### /getTokenInfo(token)
 Will return *credit, limit_filesize* and *limit_photos* for the given token.
