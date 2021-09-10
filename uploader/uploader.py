@@ -11,11 +11,11 @@ token = ''# enter your token (send me a mail to cloud@openscan.eu with your fore
 
 ################ No need to change anything below ##################
 
-size_to_split = 200000000
+size_to_split = 200000000 #200MB is the maximum part size (total zip file can be up to 2GB)
 limit_filesize = 0
 limit_photos = 0
 credit = 0
-allowed_extensions = ['.jpg', '.jpeg', '.JPG', '.JPEG', '.png', '.PNG']
+allowed_extensions = ['.jpg', '.jpeg', '.JPG', '.JPEG', '.png', '.PNG'] #will add more soon
 user = 'openscan'
 pw = 'free'
 server = 'http://openscanfeedback.dnsuser.de:1334/'
