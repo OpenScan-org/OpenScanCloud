@@ -67,7 +67,6 @@ def prepareSet():
 
     for i in list:
         if os.path.splitext(i)[1] not in allowed_extensions:
-            os.remove(dir_images + i)
             list.remove(i)
     if len(list) == 0:
         print('ERROR: no images found in ' + dir_images)
@@ -87,7 +86,7 @@ def prepareSet():
 def zipAndSplit(imagelist):
     print('zipping images')
     for i in os.listdir(dir_temp):
-        os.remove(dir_temp + i)#
+        os.remove(dir_temp + i)
 
     projectname = str(int(time.time()*100))+ '-OSC.zip'
     file = dir_temp + projectname
