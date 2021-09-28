@@ -41,23 +41,17 @@ def uploadAndStart(filelist, ulinks):
         link = ulinks[i]
         i = i+1
 
-        url = link
-        files = {'file': open(file, 'rb')}
-        headers = {'Content-type': 'application/octet-stream'}
-
-        r = requests.post(url, headers=headers, files=files)
+        data = open(file, 'rb').read()
+        r = requests.post(url=link, data=data, headers={'Content-type': 'application/octet-stream'})
         if r.status_code != 200:
             stop('ERROR: could not upload file')
-        files.clear()
 
-        os.remove(file)
     print('starting project')
     r = OpenScanCloud('startProject', msg)
     if r.status_code != 200:
         stop('ERROR: could not start processing')
     print('processing started ... you will get an email soon')
     stop('thank you for testing OpenScanCloud')
-
 def getAndVerifyToken():
     print('verifying token')
     global limit_filesize
