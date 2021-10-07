@@ -28,11 +28,8 @@ def stop(msg):
         pass
 
 def OpenScanCloud(cmd, msg):
-    r = requests.get(server + cmd, auth=(user, pw), params=msg)
-    if r.status_code == 200:
-        return r
-    else:
-        return r
+    r = requests.get(server + cmd, auth=(user, pw), params=msg, timeout=1)
+    return r
 
 def uploadAndStart(filelist, ulinks):
     i = 0
