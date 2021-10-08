@@ -6,7 +6,12 @@ The OpenScan Cloud is intended to be a decentralized, open and free photogrammet
 
 The API can be used as a great addition to existing photogrammetry rigs like the OpenScan Mini or Classic but also any other rig. The only things needed to start a reconstruction are a user-specific (or public) token and of course an image set (preferably as a zip file).
 
-I would also like to create a Desktop uploader, so that users can choose an image set, which then gets uploaded. As I have no experience with creating a Desktop GUI (besides node-red-dashboard ;)) I would highly appreciate any help on that part.
+## Current functionality / desktop uploader for Windows ( [Download](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/Uploader.win.zip))
+)
+The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. 
+
+## Current functionality / python uploader (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/uploader.py))
+The python script can be a starting point to create your own solution. Currently you only need to change a handful of parameters at the beginning of the file. Note, that the 'requests' module is needed (```pip install requests```)
 
 ## Current functionality / http endpoints
 Please feel free to add your thoughts on the design. Currently I implemented the following http endpoints:
@@ -34,10 +39,7 @@ Credit will be used to monitor the overall usage of processing ressources. The c
 There will be a public token, with a certain amount of credit per time (e.g. 10 GB per day or so). People using this token won't have access to additional features like auto-email when the reconstruction is done + individual support. Furthermore the data submitted through this token will be used for further research and improvement of the processing engine (and future features of OpenScan). In case of high loads on the server side, sets created with private tokens might be prioritized (at some point in the future)
 
 - Private Token
-This token is bound to an individual and certain details (forename and surname and email address) in order to allow additional features, like email alerts and individual support.
+This token is bound to an individual and certain details (forename and surname and email address) in order to allow additional features, like email alerts and individual support. At the current stage, the image sets submitted will be used for internal research and testing. No images/3d models will be published.
 
-## Discussion
-
-Please feel free to share your thoughts and let me know if you need any additional information.
-
-I will add a working python example soon :)
+## Changelog
+- 2021-10-08 added a Windows Uploader GUI in /uploader
