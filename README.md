@@ -6,6 +6,12 @@ The OpenScan Cloud is intended to be a decentralized, open and free photogrammet
 
 The API can be used as a great addition to existing photogrammetry rigs like the OpenScan Mini or Classic but also any other rig. The only things needed to start a reconstruction are a user-specific (or public) token and of course an image set (preferably as a zip file).
 
+Note that the application is totally free (and hopefully I can keep it free/donation-based in the future). Your data will be transferred through Dropbox and stored/processed on my personal servers. I will use those image sets and resulting 3d models for further research, but none of your data will be published without your explicit consent!
+
+If you like the project, feel free to support my work on [BuyMeACoffee](https://www.buymeacoffee.com/OpenScan)
+
+Thank you :)
+
 ## Current functionality / desktop uploader for Windows ( [Download](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/Uploader.win.zip))
 ![Desktop Uploader for Windows](https://i.imgur.com/jUSTf1o.png)
 
