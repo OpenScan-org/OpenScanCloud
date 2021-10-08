@@ -7,7 +7,8 @@ The OpenScan Cloud is intended to be a decentralized, open and free photogrammet
 The API can be used as a great addition to existing photogrammetry rigs like the OpenScan Mini or Classic but also any other rig. The only things needed to start a reconstruction are a user-specific (or public) token and of course an image set (preferably as a zip file).
 
 ## Current functionality / desktop uploader for Windows ( [Download](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/Uploader.win.zip))
-)
+![Desktop Uploader for Windows](https://i.imgur.com/jUSTf1o.png)
+
 The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. 
 
 ## Current functionality / python uploader (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/uploader.py))
