@@ -18,6 +18,8 @@ Thank you :)
 The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. 
 
 ## Current functionality / Beta Firmware for OpenScan Classic & Mini (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/firmware_beta.json))
+![Firmware for OpenScan Pi](https://i.redd.it/yrmopdyr9ts71.png)
+
 Install the latest Beta Firmware for the OpenScan and OpenScan Mini by running the following command:
 
 ```sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScanCloud/main/uploader/firmware_beta.json && node-red-restart```
