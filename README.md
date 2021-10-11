@@ -17,6 +17,13 @@ Thank you :)
 
 The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. 
 
+## Current functionality / Beta Firmware for OpenScan Classic & Mini (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/firmware_beta.json))
+Install the latest Beta Firmware for the OpenScan and OpenScan Mini by running the following command:
+
+```sudo wget -O /home/pi/.node-red/flows_raspberrypi.json https://raw.githubusercontent.com/OpenScanEu/OpenScanCloud/main/uploader/firmware_beta.json && node-red-restart```
+
+You will need to reboot the Raspberry Pi after the install + 1-2mins.
+
 ## Current functionality / python uploader (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/uploader.py))
 The python script can be a starting point to create your own solution. Currently you only need to change a handful of parameters at the beginning of the file. Note, that the 'requests' module is needed (```pip install requests```)
 
@@ -49,4 +56,5 @@ There will be a public token, with a certain amount of credit per time (e.g. 10 
 This token is bound to an individual and certain details (forename and surname and email address) in order to allow additional features, like email alerts and individual support. At the current stage, the image sets submitted will be used for internal research and testing. No images/3d models will be published.
 
 ## Changelog
+- 2021-10-11 added Beta Firmware for OpenScanPi 
 - 2021-10-08 added a Windows Uploader GUI in /uploader
