@@ -28,7 +28,7 @@ def stop(msg):
         pass
 
 def OpenScanCloud(cmd, msg):
-    r = requests.get(server + cmd, auth=(user, pw), params=msg, timeout=1)
+    r = requests.get(server + cmd, auth=(user, pw), params=msg)
     return r
 
 def uploadAndStart(filelist, ulinks):
