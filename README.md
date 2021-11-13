@@ -15,6 +15,8 @@ Thank you :)
 ## Current functionality / desktop uploader for Windows ( [Download](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/Uploader.win.zip))
 ![Desktop Uploader for Windows](https://i.imgur.com/jUSTf1o.png)
 
+### KNOWN ISSUE: Unfortunately, for some users the software might time-out when establishing a connection to my servers. This can be identified if it does not change for several minutes... Sorry :) I will try my best to release and update as soon as possible.
+
 The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. 
 
 ## Current functionality / Beta Firmware for OpenScan Classic & Mini (See [Sourecode](https://github.com/OpenScanEu/OpenScanCloud/blob/main/uploader/firmware_beta.json))
