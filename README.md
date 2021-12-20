@@ -60,5 +60,6 @@ There will be a public token, with a certain amount of credit per time (e.g. 10 
 This token is bound to an individual and certain details (forename and surname and email address) in order to allow additional features, like email alerts and individual support. At the current stage, the image sets submitted will be used for internal research and testing. No images/3d models will be published.
 
 ## Changelog
+- 2021-12-20 added Texture to the 3d model + improved firmware
 - 2021-10-11 added Beta Firmware for OpenScanPi 
 - 2021-10-08 added a Windows Uploader GUI in /uploader
