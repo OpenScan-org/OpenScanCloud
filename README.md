@@ -12,12 +12,22 @@ If you like the project, feel free to support my work on [Patreon](https://www.p
 
 Thank you :)
 
-## Current functionality / desktop uploader for Windows ( [Download](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/Uploader.win.zip))
-![Desktop Uploader for Windows](https://i.imgur.com/jUSTf1o.png)
+## Current functionality / desktop uploader for Windows ( [Download executable](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/WindowsUploader.exe))
 
-### KNOWN ISSUE: Unfortunately, for some users the software might time-out when establishing a connection to my servers. This can be identified if it does not change for several minutes... Sorry :) I will try my best to release and update as soon as possible.
+* updated 2022-05-12 
 
-The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder or a zip file containing images and uploading those to the OpenScanCloud and initialize the processing. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. Make sure, that there are no sub-folders inside the Zip-Container.
+![image](https://user-images.githubusercontent.com/57842400/168089502-314cec43-0555-49e3-9043-06a5b5068906.png)
+
+Enter your token
+
+![image](https://user-images.githubusercontent.com/57842400/168090093-0900defb-6f92-4978-b2ba-e4946e7882d5.png)
+
+Select your folder and upload the photos to the OpenScanCloud
+
+
+The Uploader is a standalone .exe, which should be able to run on any Windows machine. It allows you to select either a folder containing images and uploading those to the OpenScanCloud. All you need is an individual token (apply by email to cloud@openscan.eu) and some images. Note, that the program will create a temporary folder and an additional .txt file containing the token in the same directory as the .exe file.
+
+[SourceCode (Python)](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/WindowsUploader.py)
 
 ## Current functionality / Beta Firmware for OpenScan Classic & Mini
 Uploading through the firmware can be done with one click and has been implemented in all recent firmware versions.
