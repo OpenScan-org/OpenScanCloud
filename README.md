@@ -12,7 +12,7 @@ If you like the project, feel free to support my work on [Patreon](https://www.p
 
 Thank you :)
 
-## Current functionality / desktop uploader for Windows ( [Download executable](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/WindowsUploader.exe))
+## Current functionality / desktop uploader for Windows ( [Download ZIP](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/OpenScanUploader.zip))
 
 * updated 2022-05-12 
 
