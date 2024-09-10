@@ -39,19 +39,186 @@ The python script can be a starting point to create your own solution. Currently
 ## Current functionality / http endpoints
 Please feel free to add your thoughts on the design. Currently I implemented the following http endpoints:
 
-- ### /createProject(token, project, photos, parts, filesize)
-Calling this endpoint will initialize a project of a given *project* name, consisting of a certain number of *photos*, split into x *parts* and having a total *filesize*. If a project is larger then 200Mb it needs to be split into several parts as this is the current upload endpoints filesize limit.
+# Flask API Reference for OpenScan User
 
-If successful it will return statuscode 200 + *{'status':'created', 'ulink':[list of uploadlinks], 'credit':credit_used}* , where the uploadlinks are valid for 4 hours.
+## Authentication
 
-- ### /startProject(token, project)
-Once a project is created and all part(s) are successfully uploaded, it is necessary to initialize the processing of the image set by calling this endpoint, which will return *{'status':'started'}*
+This API uses HTTP Basic Authentication. The following credentials are required for access:
 
-- ### /getProjectInfo(token, project)
-Calling this endpoint will return *{'dlink':downloadlink, 'status':status, 'ulink':uploadlinks}*.
+- Username: `openscan`
+- Password: `free`
 
-- ### /getTokenInfo(token)
-Will return *credit, limit_filesize* and *limit_photos* for the given token.
+Unauthorized access will result in a 401 Unauthorized response.
+
+## Endpoints
+
+### 1. Request Token
+
+Request a new token for access to the service.
+
+```
+GET /requestToken
+```
+
+#### Parameters
+
+| Name     | Type   | Description                    |
+|----------|--------|--------------------------------|
+| mail     | string | Email address of the requester |
+| forename | string | First name of the requester    |
+| lastname | string | Last name of the requester     |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns an empty object `{}`      |
+| 400    | Bad Request. Missing fields or unknown error |
+
+### 2. Get Token Info
+
+Retrieve information about a specific token.
+
+```
+GET /getTokenInfo
+```
+
+#### Parameters
+
+| Name  | Type   | Description                        |
+|-------|--------|------------------------------------|
+| token | string | The token to retrieve information for |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns JSON object with token info |
+| 400    | Bad Request. Missing token or token doesn't exist |
+
+#### Success Response Fields
+
+- `credit`
+- `limit_filesize`
+- `limit_photos`
+
+### 3. Get Project Info
+
+Retrieve information about a specific project.
+
+```
+GET /getProjectInfo
+```
+
+#### Parameters
+
+| Name    | Type   | Description                     |
+|---------|--------|---------------------------------|
+| token   | string | The token associated with the project |
+| project | string | The project identifier          |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns JSON object with project info |
+| 400    | Bad Request. Missing fields or token doesn't exist |
+| 401    | Unauthorized. Project doesn't exist        |
+
+#### Success Response Fields
+
+- `dlink` 
+- `status`
+- `ulink`
+
+### 4. Create Project
+
+Create a new project associated with a token.
+
+```
+GET /createProject
+```
+
+#### Parameters
+
+| Name     | Type    | Description                      |
+|----------|---------|----------------------------------|
+| token    | string  | The token to associate with the project |
+| project  | string  | The project identifier           |
+| photos   | integer | Number of photos                 |
+| parts    | integer | Number of parts                  |
+| filesize | integer | File size                        |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns JSON object               |
+| 400    | Bad Request. Various error conditions      |
+
+#### Success Response Object
+
+```json
+{
+  "status": "created",
+  "ulink": [array of upload links],
+  "credit": remaining credit
+}
+```
+
+### 5. Reset Project
+
+Reset an existing project.
+
+```
+GET /resetProject
+```
+
+#### Parameters
+
+| Name    | Type   | Description                     |
+|---------|--------|---------------------------------|
+| token   | string | The token associated with the project |
+| project | string | The project identifier          |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns an empty object `{}`      |
+| 400    | Bad Request. Missing fields or doesn't exist |
+
+### 6. Start Project
+
+Start an existing project.
+
+```
+GET /startProject
+```
+
+#### Parameters
+
+| Name    | Type   | Description                     |
+|---------|--------|---------------------------------|
+| token   | string | The token associated with the project |
+| project | string | The project identifier          |
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns JSON object               |
+| 400    | Bad Request. Various error conditions      |
+
+#### Success Response Object
+
+```json
+{
+  "status": "initialized"
+}
+```
+
+---
 
 ## Token and credit system
 ### Credit
