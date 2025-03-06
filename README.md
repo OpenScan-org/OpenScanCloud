@@ -12,6 +12,12 @@ If you like the project, feel free to support my work on [Patreon](https://www.p
 
 Thank you :)
 
+## Current functionality / Web Uploader through the browser
+
+![image](https://github.com/user-attachments/assets/d6619cd9-f54c-4795-8ee4-a6e16f038743)
+
+Upload up to 2GB of photos through the Web interface without the need for any additional app!
+
 ## Current functionality / desktop uploader for Windows ( [Download ZIP](https://github.com/OpenScanEu/OpenScanCloud/raw/main/uploader/OpenScanUploader.zip))
 
 * updated 2022-05-12 
