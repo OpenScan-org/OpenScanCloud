@@ -226,6 +226,69 @@ GET /startProject
 
 ---
 
+### 7. Get Queue Estimate
+
+Get an estimate of the current processing queue time.
+
+```
+GET /getQueueEstimate
+```
+
+#### Authentication Required
+
+Uses the same HTTP Basic Authentication as other endpoints.
+
+#### Parameters
+
+None required.
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Returns JSON object with time estimate |
+| 500    | Internal Server Error. Watch directory issues |
+
+#### Success Response Object
+
+```json
+{
+  "estimated_time_seconds": 2750.0
+}
+```
+
+### 8. Server Status
+
+Check if the server is online and responding.
+
+```
+GET /status
+```
+
+#### Authentication Required
+
+None. This is a public endpoint for health checks.
+
+#### Parameters
+
+None required.
+
+#### Responses
+
+| Status | Description                                |
+|--------|--------------------------------------------|
+| 200    | Success. Server is online                  |
+| 500    | Internal Server Error. Server has issues  |
+
+#### Success Response Object
+
+```json
+{
+  "status": "online"
+}
+```
+
+
 ## Token and credit system
 ### Credit
 Credit will be used to monitor the overall usage of processing ressources. The credit value is bound to each token.
